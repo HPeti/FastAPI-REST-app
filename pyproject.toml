@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "basic-rest-api-app"
+version = "0.1.0"
+description = ""
+authors = ["Peter Hegedus <peter_hegedus3@epam.com>"]
+readme = "README.md"
+packages = [{include = "basic_rest_api_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.89.1"
+uvicorn = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
