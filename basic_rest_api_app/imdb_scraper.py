@@ -6,7 +6,7 @@ import re
 SCRAPE_URL = 'https://www.imdb.com/chart/top/'
 
 # Scrapes top 250 rated movies from IMDB
-def scrape_movies(limit: int = 250) -> list[str]:
+def scrape_movies(limit: int = 250) -> list[dict]:
     response = requests.get(SCRAPE_URL)
     soup = BeautifulSoup(response.text, 'html.parser')
 
