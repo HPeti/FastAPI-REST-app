@@ -18,7 +18,7 @@ Dependency descriptions for the project:
 - For `poetry`: `pyproject.toml`
 - For `venv`: `requirements.txt`
 
-To export the dependencies from `poetry` to `venv` format, use `poetry export -f requirements.txt --output requirements.txt`
+To export the dependencies from `poetry` to `venv` format, use `poetry export -f requirements.txt --output requirements.txt --without-hashes`
 
 ### Poetry
 
