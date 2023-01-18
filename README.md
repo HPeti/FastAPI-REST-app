@@ -7,8 +7,20 @@ Used tools:
 - Poetry
 - FastAPI
 - SQLite
+- BeautifulSoup4
 
 ## How to run project
+
+You can use `poetry` or `venv` to run the project with the given dependencies.
+
+Dependency descriptions for the project:
+
+- For `poetry`: `pyproject.toml`
+- For `venv`: `requirements.txt`
+
+To export the dependencies from `poetry` to `venv` format, use `poetry export -f requirements.txt --output requirements.txt`
+
+### Poetry
 
 ```cmd
 poetry shell
@@ -28,8 +40,18 @@ You can access the documentation on <http://127.0.0.1:8000/docs>.
 
 Data is scraped off from <https://www.imdb.com/chart/top/> URL.
 
-Only these informations are used from the movies:
+These informations are used from the movies:
 
-- title
-- year
-- rating
+- Title of movie
+- Year of release
+- Rating
+- Casts
+
+## Links, documentation
+
+- Gitignore (Python, VSCode, venv) - <https://www.toptal.com/developers/gitignore/api/visualstudiocode,venv,python>
+- IMBD Top list - <https://www.imdb.com/chart/top/>
+- FastAPI SQL Databases - <https://fastapi.tiangolo.com/tutorial/sql-databases/>
+- Poetry documentation - <https://python-poetry.org/docs/>
+- BeautifulSoup4 docs - <https://beautiful-soup-4.readthedocs.io/en/latest/>
+- Python typing (PEP 585): <https://peps.python.org/pep-0585/#implementation>
