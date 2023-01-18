@@ -11,7 +11,12 @@ python = "^3.11"
 fastapi = "^0.89.1"
 uvicorn = "^0.20.0"
 sqlalchemy = "^1.4.46"
+bs4 = "^0.0.1"
+requests = "^2.28.2"
 
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
