@@ -29,8 +29,11 @@ def __extract_movie_infos_to_list(limit: int, movies, cast: list[str], ratings: 
         year = __extract_year_from_movie(movie_string)
         rating = __format_rating(ratings[index])
 
-        list.append(__movie_info_to_dict(id, title, rating, year, cast[index]))
+        list.append(__movie_info_to_dict(id, title, year, rating, cast[index]))
     return list
+
+def __movie_info_to_dict(id: int, title: str, year: str, rating: float, cast: str) -> dict:
+    return {'id': id, 'title': title, 'year': year, 'ratings': rating, 'cast': cast}
 
 def __format_movie_into_line(movie_string: str) -> str:
     return ' '.join(movie_string.split()).replace('.', '')
@@ -43,6 +46,3 @@ def __extract_year_from_movie(movie_string: str) -> str:
 
 def __format_rating(rating: str) -> float:
     return round(float(rating), 1)
-
-def __movie_info_to_dict(id: int, title: str, year: str, rating: float, cast: str) -> dict:
-    return {'id': id, 'movie_title': title, 'year': year, 'ratings': rating, 'cast': cast}
